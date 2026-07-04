@@ -4,22 +4,40 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("What is your final score? ");
+        Console.Write("What is your final score? ");
         string score = Console.ReadLine();
         int mark = int.Parse(score);
+        string letter = "";
 
         if (90<=mark)
         {
-            Console.WriteLine("A");
+            letter = "A";
         }
         else if (80<=mark)
         {
-            Console.WriteLine("B");
+            letter ="B";
         }
         else if (70<=mark)
         {
-            Console.WriteLine("C");
+            letter = "C";
+        }
+        else if (60<=mark)
+        {
+            letter = "D";
+        }
+        else
+        {
+            letter = "F";
+        }
 
+        Console.WriteLine(letter);
+        if (mark>=70)
+        {
+            Console.WriteLine("Congratulations!! You passed the term");
+        }
+        else
+        {
+            Console.WriteLine("You might want to try again next term.");
         }
     }
 }
