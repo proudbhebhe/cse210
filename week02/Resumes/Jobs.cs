@@ -1,8 +1,13 @@
-using System.Security.Cryptography.X509Certificates;
-
-public class Jobs;
+using System;
+public class Jobs
 {
-    public string _jobTitle = "Software Engineer";
-    public string _jobCompany = "";
+    public  String _jobTitle;
+    public  String _jobCompany;
+    public int _startYear;
+    public int _endYear;
 
+    public void Display()
+    {
+        Console.WriteLine($"{_jobTitle} ({_jobCompany}) {_startYear}-{_endYear}");
+    }
 }
